@@ -1,0 +1,137 @@
+commit b04c86f2075e5cd3e5e1ef90995cc5a123f8825f
+Author: Aline Carvalho <dodopolees@gmail.com>
+Date:   Tue Mar 3 21:36:00 2020 -0300
+
+    Alterado o arquivo hosts (apagada algumas linhas)
+
+diff --git a/hosts b/hosts
+index 67131b9..6529ff8 100644
+--- a/hosts
++++ b/hosts
+@@ -1,7 +1,2 @@
+ 127.0.0.1	localhost
+ 127.0.1.1	debian9
+-
+-# The following lines are desirable for IPv6 capable hosts
+-::1     localhost ip6-localhost ip6-loopback
+-ff02::1 ip6-allnodes
+-ff02::2 ip6-allrouters
+
+commit 44c077f170a0a58b63b4ca5ed1ed57f03b58f663
+Author: Aline Carvalho <dodopolees@gmail.com>
+Date:   Tue Mar 3 21:31:01 2020 -0300
+
+    Adicionando os aequivos hosts e shadow no repositorio
+
+diff --git a/hosts b/hosts
+new file mode 100644
+index 0000000..67131b9
+--- /dev/null
++++ b/hosts
+@@ -0,0 +1,7 @@
++127.0.0.1	localhost
++127.0.1.1	debian9
++
++# The following lines are desirable for IPv6 capable hosts
++::1     localhost ip6-localhost ip6-loopback
++ff02::1 ip6-allnodes
++ff02::2 ip6-allrouters
+diff --git a/shadow b/shadow
+new file mode 100644
+index 0000000..cfc0c72
+--- /dev/null
++++ b/shadow
+@@ -0,0 +1,40 @@
++root:$6$rObu8fIF$FskWkmkIJEMOMdLQnNaA66gEl1R5zC9lms8vXU/rfpEKeurQQeUKtJJgJ3qZJ4hKwKFCoj0LuPM6SutRlGZg3/:18003:0:99999:7:::
++daemon:*:18003:0:99999:7:::
++bin:*:18003:0:99999:7:::
++sys:*:18003:0:99999:7:::
++sync:*:18003:0:99999:7:::
++games:*:18003:0:99999:7:::
++man:*:18003:0:99999:7:::
++lp:*:18003:0:99999:7:::
++mail:*:18003:0:99999:7:::
++news:*:18003:0:99999:7:::
++uucp:*:18003:0:99999:7:::
++proxy:*:18003:0:99999:7:::
++www-data:*:18003:0:99999:7:::
++backup:*:18003:0:99999:7:::
++list:*:18003:0:99999:7:::
++irc:*:18003:0:99999:7:::
++gnats:*:18003:0:99999:7:::
++nobody:*:18003:0:99999:7:::
++systemd-timesync:*:18003:0:99999:7:::
++systemd-network:*:18003:0:99999:7:::
++systemd-resolve:*:18003:0:99999:7:::
++systemd-bus-proxy:*:18003:0:99999:7:::
++_apt:*:18003:0:99999:7:::
++dnsmasq:*:18003:0:99999:7:::
++avahi-autoipd:*:18003:0:99999:7:::
++messagebus:*:18003:0:99999:7:::
++usbmux:*:18003:0:99999:7:::
++geoclue:*:18003:0:99999:7:::
++speech-dispatcher:!:18003:0:99999:7:::
++sshd:*:18003:0:99999:7:::
++rtkit:*:18003:0:99999:7:::
++pulse:*:18003:0:99999:7:::
++avahi:*:18003:0:99999:7:::
++colord:*:18003:0:99999:7:::
++saned:*:18003:0:99999:7:::
++Debian-gdm:*:18003:0:99999:7:::
++hplip:*:18003:0:99999:7:::
++analista:$6$iAZ3R3OF$SAXRQomwG8vDCQ5aasrZXBSRg.Jb/eZ/NjY1kJelNgnspjZc8KseVweYgMyQWLBQZ5tzmvmsPlT0yX1fkLGn01:18003:0:99999:7:::
++gitlog:*:18306:0:99999:7:::
++gitdaemon:*:18306:0:99999:7:::
+
+commit 4c6c9659113a531d85494aaa269e86f0c35f8a19
+Author: Aline Carvalho <dodopolees@gmail.com>
+Date:   Thu Feb 27 23:00:07 2020 -0300
+
+    Adicionando arquivo passwd
+
+diff --git a/passwd b/passwd
+new file mode 100644
+index 0000000..e3cc2c5
+--- /dev/null
++++ b/passwd
+@@ -0,0 +1,40 @@
++root:x:0:0:root:/root:/bin/bash
++daemon:x:1:1:daemon:/usr/sbin:/usr/sbin/nologin
++bin:x:2:2:bin:/bin:/usr/sbin/nologin
++sys:x:3:3:sys:/dev:/usr/sbin/nologin
++sync:x:4:65534:sync:/bin:/bin/sync
++games:x:5:60:games:/usr/games:/usr/sbin/nologin
++man:x:6:12:man:/var/cache/man:/usr/sbin/nologin
++lp:x:7:7:lp:/var/spool/lpd:/usr/sbin/nologin
++mail:x:8:8:mail:/var/mail:/usr/sbin/nologin
++news:x:9:9:news:/var/spool/news:/usr/sbin/nologin
++uucp:x:10:10:uucp:/var/spool/uucp:/usr/sbin/nologin
++proxy:x:13:13:proxy:/bin:/usr/sbin/nologin
++www-data:x:33:33:www-data:/var/www:/usr/sbin/nologin
++backup:x:34:34:backup:/var/backups:/usr/sbin/nologin
++list:x:38:38:Mailing List Manager:/var/list:/usr/sbin/nologin
++irc:x:39:39:ircd:/var/run/ircd:/usr/sbin/nologin
++gnats:x:41:41:Gnats Bug-Reporting System (admin):/var/lib/gnats:/usr/sbin/nologin
++nobody:x:65534:65534:nobody:/nonexistent:/usr/sbin/nologin
++systemd-timesync:x:100:102:systemd Time Synchronization,,,:/run/systemd:/bin/false
++systemd-network:x:101:103:systemd Network Management,,,:/run/systemd/netif:/bin/false
++systemd-resolve:x:102:104:systemd Resolver,,,:/run/systemd/resolve:/bin/false
++systemd-bus-proxy:x:103:105:systemd Bus Proxy,,,:/run/systemd:/bin/false
++_apt:x:104:65534::/nonexistent:/bin/false
++dnsmasq:x:105:65534:dnsmasq,,,:/var/lib/misc:/bin/false
++avahi-autoipd:x:106:110:Avahi autoip daemon,,,:/var/lib/avahi-autoipd:/bin/false
++messagebus:x:107:111::/var/run/dbus:/bin/false
++usbmux:x:108:46:usbmux daemon,,,:/var/lib/usbmux:/bin/false
++geoclue:x:109:115::/var/lib/geoclue:/bin/false
++speech-dispatcher:x:110:29:Speech Dispatcher,,,:/var/run/speech-dispatcher:/bin/false
++sshd:x:111:65534::/run/sshd:/usr/sbin/nologin
++rtkit:x:112:116:RealtimeKit,,,:/proc:/bin/false
++pulse:x:113:117:PulseAudio daemon,,,:/var/run/pulse:/bin/false
++avahi:x:114:120:Avahi mDNS daemon,,,:/var/run/avahi-daemon:/bin/false
++colord:x:115:121:colord colour management daemon,,,:/var/lib/colord:/bin/false
++saned:x:116:122::/var/lib/saned:/bin/false
++Debian-gdm:x:117:123:Gnome Display Manager:/var/lib/gdm3:/bin/false
++hplip:x:118:7:HPLIP system user,,,:/var/run/hplip:/bin/false
++analista:x:1000:1000:Analista,,,:/home/analista:/bin/bash
++gitlog:x:119:65534::/nonexistent:/bin/false
++gitdaemon:x:120:65534::/nonexistent:/bin/false
